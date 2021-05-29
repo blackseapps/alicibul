@@ -12,7 +12,9 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8AFB922CE7994610B80FAA26 /* Avenir-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9172265D2F1424A8FBEDD5F /* Avenir-Regular.ttf */; };
 		911BEAD41BA8DC11C8E07FC3 /* libPods-alicibul.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4A9BF94D61F3E9CA028D72 /* libPods-alicibul.a */; };
+		BB57F0F0EE73444B820EEE02 /* Avenir-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E689A1C2E86442DB9ABF560A /* Avenir-Heavy.ttf */; };
 		FF5BF6C5213938D505EF01A5 /* libPods-alicibul-alicibulTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC9650DEFD5D1D0C2517E48 /* libPods-alicibul-alicibulTests.a */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +45,9 @@
 		9965A25EE10DA01D85CC6042 /* Pods-alicibul.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alicibul.release.xcconfig"; path = "Target Support Files/Pods-alicibul/Pods-alicibul.release.xcconfig"; sourceTree = "<group>"; };
 		9F4A9BF94D61F3E9CA028D72 /* libPods-alicibul.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-alicibul.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C628A10711222FB97BA853FD /* Pods-alicibul.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alicibul.debug.xcconfig"; path = "Target Support Files/Pods-alicibul/Pods-alicibul.debug.xcconfig"; sourceTree = "<group>"; };
+		E689A1C2E86442DB9ABF560A /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-Heavy.ttf"; path = "../src/assets/fonts/Avenir-Heavy.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F9172265D2F1424A8FBEDD5F /* Avenir-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-Regular.ttf"; path = "../src/assets/fonts/Avenir-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		484F9E0E8E8E48009048D2AD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E689A1C2E86442DB9ABF560A /* Avenir-Heavy.ttf */,
+				F9172265D2F1424A8FBEDD5F /* Avenir-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +135,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				AD617907C7D14A8BB8D87AC6 /* Pods */,
+				484F9E0E8E8E48009048D2AD /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -145,7 +159,6 @@
 				21C7C47386A0A17AE437BBA8 /* Pods-alicibul-alicibulTests.debug.xcconfig */,
 				251C00D9661CC6DC4070DAE3 /* Pods-alicibul-alicibulTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -245,6 +258,8 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				BB57F0F0EE73444B820EEE02 /* Avenir-Heavy.ttf in Resources */,
+				8AFB922CE7994610B80FAA26 /* Avenir-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +500,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2HW332K2HD;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = alicibul/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -511,6 +527,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2HW332K2HD;
 				INFOPLIST_FILE = alicibul/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
