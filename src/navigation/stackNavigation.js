@@ -4,9 +4,9 @@ import { createStackNavigator, Header, TransitionSpecs } from "@react-navigation
 import { Colors } from "../styles/Colors";
 import { hp } from "../styles/Dimen";
 import Splash from "../containers/auth/Splash";
-import HeaderTitle from "../view/header/headerTitle";
+import HeaderTitle from "../views/header/headerTitle";
 import HomePage from "../containers/home/HomePage";
-import GoBackButton from "../view/header/back";
+import GoBackButton from "../views/header/back";
 import Login from "../containers/auth/Login";
 
 const RootStack = createStackNavigator();

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Image, View, StyleSheet } from "react-native";
 import { Colors } from "../../styles/Colors";
 import { useDispatch, useSelector } from "react-redux";
+import * as Images from "../../assets/images";
 
 const Splash = (props) => {
 
@@ -16,9 +17,11 @@ const Splash = (props) => {
   }, []);
 
 
-  return (<View style={styles.container}>
-    <Image source={null} />
-  </View>);
+  return (
+    <View style={styles.container}>
+      <Image source={Images.imagesLoginLogoWhite} />
+    </View>
+  );
 };
 
 export default Splash;

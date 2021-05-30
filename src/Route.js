@@ -1,6 +1,6 @@
 import React from "react";
 import StackRoot from "./navigation/stackNavigation";
-import Loading from "./view/Loading";
+import Loading from "./views/Loading";
 import {useSelector} from "react-redux";
 
 
