@@ -12,7 +12,6 @@ const Background = (props) => {
 export default Background;
 
 const styles = StyleSheet.create({
-
   imageBg: {
     position: "absolute",
     width: wp(375),

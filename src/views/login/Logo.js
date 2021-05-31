@@ -17,9 +17,7 @@ export default Logo;
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: "center",
     marginTop: hp(162),
-
   },
   imagesLogo: {
     width: wp(185),
