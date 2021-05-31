@@ -6,15 +6,16 @@
  * @flow strict-local
  */
 
-import React from 'react';
-import { StatusBar, } from 'react-native';
+import "react-native-gesture-handler";
+import React from "react";
+import { StatusBar } from "react-native";
 import { Provider } from "react-redux";
 import { NavigationContainer } from "@react-navigation/native";
-import {PersistGate} from 'redux-persist/integration/react'
+import { PersistGate } from "redux-persist/integration/react";
 import Route from "./src/Route";
 import { navigationRef } from "./src/navigation/RootNavigation";
 import { persistor, store } from "./src/redux/store";
-
+import Animated from 'react-native-reanimated';
 
 const App = () => {
 
@@ -23,13 +24,13 @@ const App = () => {
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <NavigationContainer ref={navigationRef}>
-          <StatusBar barStyle="dark-content" translucent backgroundColor="transparent"/>
-          <Route/>
+          <StatusBar barStyle="dark-content" translucent backgroundColor="transparent" />
+          <Route />
         </NavigationContainer>
       </PersistGate>
     </Provider>
 
   );
-}
+};
 
 export default App;

@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
   },
   content: {
     flexDirection: "row",
+    alignItems:'center'
   },
   icon: {
     resizeMode: "center",
@@ -61,5 +62,6 @@ const styles = StyleSheet.create({
   },
   separator: {
     marginLeft: wp(10),
+
   },
 });

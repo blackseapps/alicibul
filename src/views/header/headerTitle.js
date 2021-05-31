@@ -3,6 +3,7 @@ import { Image, View, Text, StyleSheet } from "react-native";
 import { Colors } from "../../styles/Colors";
 import { wp, hp } from "../../styles/Dimen";
 import { useSelector } from "react-redux";
+import { avenirHeavy } from "../../assets/fonts";
 
 const HeaderTitle = (props) => {
 
@@ -29,8 +30,8 @@ const styles = StyleSheet.create({
   text: {
     fontSize: wp(20),
     fontWeight: "600",
-    fontFamily: "Gilroy-Bold",
+    fontFamily: avenirHeavy,
     textAlign: "center",
-    color: Colors.title_active,
+    color: Colors.black,
   },
 });

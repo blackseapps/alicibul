@@ -38,10 +38,10 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   textBold: {
-    fontSize: wp(14),
+    fontSize: wp(12),
     color: Colors.Primary,
     fontFamily: avenirHeavy,
-    lineHeight: hp(17),
+
     fontWeight: "700",
     textAlign: "center",
   },

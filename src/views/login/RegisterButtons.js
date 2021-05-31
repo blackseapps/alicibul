@@ -13,7 +13,7 @@ const RegisterButtons = (props) => {
 
 
   const redirectHome = () => {
-    navigation.replace("Home");
+    navigation.replace("BottomNavigation");
   };
 
   return (

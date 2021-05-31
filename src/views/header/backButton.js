@@ -4,7 +4,7 @@ import {hp, wp} from "../../styles/Dimen";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import {useNavigation} from '@react-navigation/native';
 
-const GoBackButton = props => {
+const BackButton = props => {
 
     const navigation = useNavigation()
 
@@ -19,7 +19,7 @@ const GoBackButton = props => {
     </View>
 }
 
-export default GoBackButton
+export default BackButton
 
 const styles = StyleSheet.create({
     container: {},
