@@ -15,9 +15,8 @@ const SalesPropertiesItem = ({ item }) => {
         <Text style={styles.title}>{item.title}</Text>
 
         <CardPicker
-          key={item.id}
           style={styles.picker}
-          value={"Otomobil"}
+          value={item.data[0].value}
           data={item.data}
           onValueChange={() => {
           }} />
@@ -47,6 +46,9 @@ const styles = StyleSheet.create({
     fontFamily: avenirHeavy,
     color: Colors.findInputSearch,
   },
-  picker: {},
+  picker: {
+    height: hp(25),
+    width: wp(300),
+  },
 });
 

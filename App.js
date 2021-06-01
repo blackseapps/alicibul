@@ -8,14 +8,19 @@
 
 import "react-native-gesture-handler";
 import React from "react";
-import { StatusBar } from "react-native";
+import { StatusBar, YellowBox } from "react-native";
 import { Provider } from "react-redux";
 import { NavigationContainer } from "@react-navigation/native";
 import { PersistGate } from "redux-persist/integration/react";
 import Route from "./src/Route";
 import { navigationRef } from "./src/navigation/RootNavigation";
 import { persistor, store } from "./src/redux/store";
-import Animated from 'react-native-reanimated';
+
+
+YellowBox.ignoreWarnings([
+  "Sending \`onAnimatedValueUpdate\` with no listeners registered.",
+]);
+
 
 const App = () => {
 

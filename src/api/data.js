@@ -70,7 +70,8 @@ export const dataSalesProperties = [
     data: [
       {
         id: uuid.v4(),
-        title: "Otomobil",
+        label: "Otomobil",
+        value: "Otomobil",
       },
     ],
   },
@@ -80,7 +81,8 @@ export const dataSalesProperties = [
     data: [
       {
         id: uuid.v4(),
-        title: "2019",
+        label: "2019",
+        value: "2019",
       },
     ],
   },
@@ -90,7 +92,8 @@ export const dataSalesProperties = [
     data: [
       {
         id: uuid.v4(),
-        title: "Jeep",
+        label: "Jeep",
+        value: "Jeep",
       },
     ],
   },
@@ -100,7 +103,8 @@ export const dataSalesProperties = [
     data: [
       {
         id: uuid.v4(),
-        title: "Renegade",
+        label: "Renegade",
+        value: "Renegade",
       },
     ],
   },
@@ -110,7 +114,8 @@ export const dataSalesProperties = [
     data: [
       {
         id: uuid.v4(),
-        title: "Dizel",
+        label: "Dizel",
+        value: "Dizel",
       },
     ],
   },
@@ -120,7 +125,8 @@ export const dataSalesProperties = [
     data: [
       {
         id: uuid.v4(),
-        title: "SUV",
+        label: "SUV",
+        value: "SUV",
       },
     ],
   },
@@ -130,7 +136,8 @@ export const dataSalesProperties = [
     data: [
       {
         id: uuid.v4(),
-        title: "1.6 Multijet",
+        label: "1.6 Multijet",
+        value: "1.6 Multijet",
       },
     ],
   },
@@ -140,7 +147,8 @@ export const dataSalesProperties = [
     data: [
       {
         id: uuid.v4(),
-        title: "Limited",
+        label: "Limited",
+        value: "Limited",
       },
     ],
   },

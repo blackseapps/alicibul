@@ -23,7 +23,7 @@ const HomePage = (props) => {
         dispatch(allActions.addListAdsAction(item, 5)));
 
       dispatch(allActions.loadingAction(false));
-    }, 2000);
+    }, 1000);
   }, []);
 
   return (

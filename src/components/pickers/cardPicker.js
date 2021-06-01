@@ -11,27 +11,27 @@ const CardPicker = (props) => {
   const placeholder = {
     label: props.placeHolder,
     value: null,
-    color: "#9EA0A4",
+    color: Colors.findInputSearch,
   };
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, props.style]}>
       <RNPickerSelect
         style={pickerSelectStyles}
         onValueChange={(value, index) => {
           props.onValueChange(index, value);
         }}
-        placeholder={placeholder}
         items={props.data}
         value={props.value}
-
         useNativeAndroidPickerStyle={false}
-
       />
-      <SimpleLineIcons style={{ position: "absolute", right: wp(10) }} color={Colors.findInputSearch}
-                       name={"arrow-down"} />
-    </View>
 
+      <SimpleLineIcons
+        style={styles.arrow}
+        color={Colors.findInputSearch}
+        name={"arrow-down"} />
+
+    </View>
   );
 };
 
@@ -39,31 +39,28 @@ export default CardPicker;
 
 const styles = StyleSheet.create({
   container: {
-
-    width: wp(340),
-    height: hp(46),
-    alignItems: "center",
-    marginLeft: wp(10),
-    marginRight: wp(10),
-
+    flexDirection: "row",
   },
-
+  arrow: {
+    position: "absolute",
+    right: wp(40),
+  },
 });
 
 const pickerSelectStyles = StyleSheet.create({
   inputIOS: {
-    width: wp(280),
-    marginTop: hp(12),
+    width: wp(300),
     fontSize: wp(17),
     color: Colors.findInputSearch,
-    fontFamily: avenirRegular,
-    lineHeight: hp(16),
+    fontFamily: avenirHeavy,
+    fontWeight: "900",
   },
   inputAndroid: {
-    width: wp(260),
+    width: wp(300),
     marginTop: hp(5),
     fontSize: wp(17),
+    fontFamily: avenirHeavy,
+    fontWeight: "900",
     color: Colors.findInputSearch,
-    lineHeight: hp(16),
   },
 });
