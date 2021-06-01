@@ -9,14 +9,13 @@ import { avenirHeavy } from "../../../assets/fonts";
 const HomeCarInfoItem = ({ item }) => {
   return (
     <View style={styles.container}>
-      <Image style={styles.images} source={item.groupImage} />
-
-      <View style={styles.opacity} />
+      <Image style={styles.imageMask} source={Images.imagesHomeListMask} />
+      <Image style={styles.images} source={Images.imagesHomeImageZero} />
 
 
       <View style={styles.content}>
-        <Text style={styles.title}>{item.groupTitle}</Text>
-        <Text style={styles.subTitle}>{item.groupCategoryTitle}</Text>
+        <Text style={styles.title}>Stüdyo özelliği ile</Text>
+        <Text style={styles.subTitle}>aracınızı en iyi şekilde sergileyin.</Text>
       </View>
     </View>
   );
@@ -26,13 +25,10 @@ export default HomeCarInfoItem;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.notiButton,
     height: hp(165),
     width: wp(337),
     borderRadius: hp(7),
-
-    marginLeft: wp(10),
-    marginRight: wp(10),
     marginBottom: wp(20),
 
     shadowColor: "rgba(14, 21, 31, 0.06)",
@@ -44,35 +40,33 @@ const styles = StyleSheet.create({
   images: {
     resizeMode: "center",
     width: "100%",
+    marginTop: hp(30),
     height: hp(145),
     borderRadius: hp(7),
   },
-  opacity: {
+  imageMask: {
     position: "absolute",
-    backgroundColor: Colors.Primary,
-    opacity: 0.5,
-    height: hp(145),
-    width: wp(166),
-    borderRadius: hp(7),
-    marginLeft: wp(1),
+    height: hp(195),
+    width: wp(377),
+    marginLeft: wp(-20),
   },
+
   content: {
     position: "absolute",
-    justifyContent: "flex-end",
-    alignItems: "flex-end",
-    bottom: 10,
-    right: 10,
+    top: 10,
+    left: 10,
   },
   title: {
-    fontSize: wp(16),
-    fontWeight: "900",
-    fontFamily: avenirHeavy,
-    color: Colors.white,
+    fontSize: wp(15),
+    fontWeight: "400",
+    color: Colors.findInputSearch,
   },
   subTitle: {
-    fontSize: wp(16),
-    fontWeight: "400",
-    color: Colors.white,
+    width: wp(172),
+    fontSize: wp(15),
+    fontWeight: "900",
+    fontFamily: avenirHeavy,
+    color: Colors.findInputSearch,
   },
 });
 

@@ -11,4 +11,8 @@ export const imagesAudiLogo = require("./images/audiLogo.png");
 
 export const imagesProfileButton = require("./images/profileButton.png");
 
-export const imagesDetailCar= require("./images/detailCar.png");
+export const imagesDetailCar = require("./images/detailCar.png");
+
+export const imagesHomeListMask = require("./images/homeListMask.png");
+
+export const imagesGift = require("./images/imagesGift.png");

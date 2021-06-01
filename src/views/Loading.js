@@ -12,7 +12,6 @@ const Loading = (props) => {
                 style={styles.absolute}
                 blurType="dark"
                 blurAmount={9}
-                blurAmount={props.blurAmount}
                 reducedTransparencyFallbackColor="white"/>
 
             <View style={styles.content}>

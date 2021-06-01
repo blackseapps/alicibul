@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Modal, ActivityIndicator, View, Text, Image } from "react-native";
+import { StyleSheet, Modal, TouchableOpacity, View, Text, Image } from "react-native";
 import { hp, wp } from "../../../styles/Dimen";
 import { Colors } from "../../../styles/Colors";
 import * as Images from "../../../assets/images";
@@ -9,7 +9,15 @@ import Styled from "styled-components";
 import { BlurView } from "@react-native-community/blur";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
-const HomeCarItem = ({ item }) => {
+const HomeCarItem = ({ item, select, onPress }) => {
+
+
+  const [like, setLike] = React.useState(false);
+
+  const onHandleLike = () => {
+    setLike(!like);
+  };
+
   return (
     <View style={styles.container}>
 
@@ -17,7 +25,11 @@ const HomeCarItem = ({ item }) => {
         <Image style={styles.images} source={item.image} />
 
 
-        <Ionicons style={styles.selectItemIcon} size={24} color={Colors.white} name={"heart"} />
+        <TouchableOpacity style={[styles.selectItemIcon]} onPress={onHandleLike}>
+          {like
+            ? <Ionicons size={24} color={Colors.price} name={"heart"} />
+            : <Ionicons size={24} color={Colors.white} name={"heart"} />}
+        </TouchableOpacity>
 
 
         <View style={styles.carLogoContent}>
@@ -72,7 +84,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: Colors.white,
     height: hp(210),
-
+    width: wp(160),
     borderRadius: hp(7),
 
 
@@ -109,8 +121,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   images: {
-    resizeMode: "contain",
-    width: "100%",
+    resizeMode: "cover",
+    width: wp(160),
     height: hp(145),
     borderRadius: hp(7),
   },
@@ -149,7 +161,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: hp(10),
     right: wp(10),
-    opacity: 0.5,
+    opacity: 0.8,
   },
 });
 

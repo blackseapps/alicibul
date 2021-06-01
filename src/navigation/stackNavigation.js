@@ -50,7 +50,7 @@ export function StackAuth() {
           return (<HeaderTitle {...props} isIcon={true} />);
         },
         headerTransparent: true,
-        headerLeft: props => (<BackButton {...props} />),
+        headerLeft: props => (<BackButton {...props} background={Colors.whiteTransparent} />),
       }}>
 
 

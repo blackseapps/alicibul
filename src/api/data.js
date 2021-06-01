@@ -1,5 +1,6 @@
 import uuid from "react-native-uuid";
 import * as Images from "../assets/images";
+import * as Icons from "../assets/icons";
 
 export const dataHomeFlow = [
   {
@@ -143,4 +144,43 @@ export const dataSalesProperties = [
       },
     ],
   },
+];
+
+export const dataCategory = [
+  {
+    id: 0,
+    title: "Tümü",
+    image: Icons.iconCatCarZero,
+  },
+  {
+    id: 1,
+    title: "Arac 1",
+    image: Icons.iconCatCarOne,
+  },
+  {
+    id: 2,
+    title: "Arac 2",
+    image: Icons.iconCatCarTwo,
+  },
+  {
+    id: 3,
+    title: "Arac 3",
+    image: Icons.iconCatCarThree,
+  },
+  {
+    id: 4,
+    title: "Arac 4",
+    image: Icons.iconCatCarFour,
+  },
+  {
+    id: 5,
+    title: "Arac 5",
+    image: Icons.iconCatCarFive,
+  },
+  {
+    id: 6,
+    title: "Arac 6",
+    image: Icons.iconCatCarSix,
+  },
+
 ];

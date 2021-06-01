@@ -1,25 +1,38 @@
 import React from "react";
-import {StyleSheet, Modal, ActivityIndicator, View} from "react-native";
-import {hp, wp} from "../../../styles/Dimen";
-import {Colors} from "../../../styles/Colors";
+import { StyleSheet, Image, View, Text, TouchableOpacity } from "react-native";
+import { hp, wp } from "../../../styles/Dimen";
+import { Colors } from "../../../styles/Colors";
 
-const HomeCategoryItem = (props) => {
+
+const HomeCategoryItem = ({ item, select, onPress }) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity onPress={() => onPress(item)} style={styles.container}>
 
-    </View>
-  )
-}
+      <Image source={item.image} />
 
-export default HomeCategoryItem
+      {item.id === select.id
+        ? <Text style={styles.title}>{item.title}</Text>
+        : <Text style={styles.title} />}
+
+    </TouchableOpacity>
+  );
+};
+
+export default HomeCategoryItem;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.black,
     justifyContent: "center",
     alignItems: "center",
-  },
+    width: wp(60),
 
-})
+  },
+  title: {
+    fontSize: wp(12),
+    fontWeight: "400",
+    color: Colors.Primary,
+    marginTop: hp(3),
+  },
+});
 

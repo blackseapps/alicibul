@@ -1,69 +1,57 @@
 import React from "react";
 import { View, Image, StyleSheet } from "react-native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { StackCarFind, StackHome, StackMessages, StackProfile, StackSales } from "./stackNavigation";
 import * as Icons from "../assets/icons";
-import Ionicons from "react-native-vector-icons/Ionicons";
-import { AnimatedTabBarNavigator, TabButtonLayout } from "react-native-animated-nav-tab-bar";
+import { AnimatedTabBarNavigator } from "react-native-animated-nav-tab-bar";
 import { Colors } from "../styles/Colors";
-
-const Tab = createBottomTabNavigator();
+import { hp, wp } from "../styles/Dimen";
 
 const Tabs = AnimatedTabBarNavigator();
 
 const BottomNavigation = () => {
   return (<Tabs.Navigator
-      // default configuration from React Navigation
-      tabBarOptions={{
-        activeTintColor: Colors.white,
-        inactiveTintColor: "#ff0000",
+      tabBarOptions={tabBarOption()}
+      appearance={appearance()}>
 
-        tabStyle: {},
-      }}
-
-    >
-
-      <Tab.Screen name="Home" options={{
+      <Tabs.Screen name="Home" options={{
         tabBarLabel: "Vitrin",
-
+        activeTabBackground: Colors.Primary,
         tabBarIcon: ({ color, size }) => (
-
-          <Image source={Icons.iconBottomNCar} />
+          color === Colors.black
+            ? <Image source={Icons.iconBottomNCarBlack} />
+            : <Image source={Icons.iconBottomNCar} />
         ),
-      }}
-                  component={StackHome} />
-      <Tab.Screen name="Home2" options={{
+      }} component={StackHome} />
+
+      <Tabs.Screen name="Find" options={{
         tabBarLabel: "Bul",
-
         tabBarIcon: ({ color, size }) => (
-          <Image source={Icons.iconBottomNCar} />
+          <Image source={Icons.iconBottomNCarFind} />
         ),
-      }}
-                  component={StackCarFind} />
+      }} component={StackCarFind} />
 
-      <Tab.Screen name="Home3" options={{
+      <Tabs.Screen name="Sales" options={{
         tabBarLabel: "Sat",
         tabBarIcon: ({ color, size }) => (
-          <Image source={Icons.iconBottomNCar} />
+          color === Colors.black
+            ? <Image source={Icons.iconBottomNPhotoBlack} />
+            : <Image source={Icons.iconBottomNPhoto} />
         ),
-      }}
-                  component={StackSales} />
+      }} component={StackSales} />
 
-      <Tab.Screen name="Home4" options={{
+      <Tabs.Screen name="Messages" options={{
         tabBarLabel: "Mesaj",
         tabBarIcon: ({ color, size }) => (
-          <Image source={Icons.iconBottomNCar} />
+          <Image source={Icons.iconBottomNMessage} />
         ),
-      }}
-                  component={StackMessages} />
+      }} component={StackMessages} />
 
-      <Tab.Screen name="Home5" options={{
+      <Tabs.Screen name="Profile" options={{
         tabBarLabel: "Profil",
         tabBarIcon: ({ color, size }) => (
-          <Image source={Icons.iconBottomNCar} />
+          <Image source={Icons.iconBottomNProfile} />
         ),
-      }}
-                  component={StackProfile} />
+      }} component={StackProfile} />
     </Tabs.Navigator>
   );
 };
@@ -71,19 +59,25 @@ const BottomNavigation = () => {
 
 export default BottomNavigation;
 
-const styles = StyleSheet.create({
-  navigatorContainer: {
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    right: 0,
-    shadowColor: "#d0d0d0",
-    shadowOffset: {
-      width: 0,
-      height: 1,
+const tabBarOption = () => {
+  return {
+    activeTintColor: Colors.white,
+    inactiveTintColor: Colors.black,
+    activeBackgroundColor: Colors.Primary,
+    style: {
+      backgroundColor: "green",
+      fontSize: wp(14),
     },
-    shadowOpacity: 0.22,
-    shadowRadius: 2.22,
-  },
+    tabStyle: {
+      borderRadius: hp(1),
+    },
+  };
+};
 
-});
+const appearance = () => {
+  return {
+    dotCornerRadius: hp(9),
+    topPadding: hp(10),
+    shadow: true,
+  };
+};

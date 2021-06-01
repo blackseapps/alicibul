@@ -1,13 +1,8 @@
 import React from "react";
-import { StyleSheet, Modal, ActivityIndicator, View, Text, Image } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { hp, wp } from "../../../styles/Dimen";
 import { Colors } from "../../../styles/Colors";
-import * as Images from "../../../assets/images";
 import { avenirHeavy } from "../../../assets/fonts";
-import * as Icons from "../../../assets/icons";
-import Styled from "styled-components";
-import { BlurView } from "@react-native-community/blur";
-import Ionicons from "react-native-vector-icons/Ionicons";
 import CardPicker from "../../pickers/cardPicker";
 
 const SalesPropertiesItem = ({ item }) => {
@@ -17,10 +12,15 @@ const SalesPropertiesItem = ({ item }) => {
 
       <View style={styles.content}>
 
-        <Text>{item.title}</Text>
+        <Text style={styles.title}>{item.title}</Text>
 
-        <CardPicker data={item.data} value={"0"} onValueChange={() => {
-        }} />
+        <CardPicker
+          key={item.id}
+          style={styles.picker}
+          value={"Otomobil"}
+          data={item.data}
+          onValueChange={() => {
+          }} />
       </View>
     </View>
   );
@@ -32,53 +32,21 @@ const styles = StyleSheet.create({
   container: {
     height: hp(48),
     width: wp(301),
-    borderBottomWidth: wp(1),
-    borderColor: Colors.notiButton,
+    borderBottomWidth: 0.5,
+    borderColor: "rgba(58, 45, 19, 0.07)",
+    marginLeft: wp(14),
+    marginRight: wp(14),
+    marginTop: hp(5),
   },
   content: {
     justifyContent: "center",
-    marginLeft: wp(9),
-    marginRight: wp(9),
-    marginTop: wp(5),
   },
-
   title: {
-    fontSize: wp(14),
-    fontWeight: "800",
+    fontSize: wp(17),
+    fontWeight: "400",
     fontFamily: avenirHeavy,
     color: Colors.findInputSearch,
   },
-  price: {
-    fontSize: wp(14),
-    fontWeight: "800",
-    fontFamily: avenirHeavy,
-    color: Colors.price,
-  },
-  subContentText: {
-    fontSize: wp(13),
-    fontWeight: "400",
-    color: Colors.subContentText,
-    marginLeft: wp(5),
-  },
-  blur: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
-  },
-  selectItemIcon: {
-    position: "absolute",
-    top: hp(10),
-    right: wp(10),
-    opacity: 0.5,
-  },
+  picker: {},
 });
 
-const BlurWrapper = Styled(BlurView)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-`;

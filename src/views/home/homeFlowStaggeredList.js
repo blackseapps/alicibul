@@ -7,9 +7,32 @@ import HomeCarItem from "../../components/views/items/homeCarItem";
 import HomeCategoryItem from "../../components/views/items/homeCategoryItem";
 import HomeCarGroupItem from "../../components/views/items/homeCarGroupItem";
 import HomeCarInfoItem from "../../components/views/items/homeCarInfoItem";
+import { useSelector } from "react-redux";
 
 const HomeFlowStaggeredList = (props) => {
 
+  const { ads } = useSelector(state => state.home);
+
+  const [selectItem, setSelectItem] = React.useState({ id: 0 });
+
+  const onHandleChange = (item) => {
+    setSelectItem(item);
+  };
+
+  const Items = ({ item }) => {
+    return <HomeCarItem
+      item={item}
+      select={selectItem}
+      onPress={onHandleChange}
+    />;
+  };
+
+
+  const listHeaderItem = ({ item }) => {
+    return (
+      <HomeCarInfoItem />
+    );
+  };
 
   const renderItem = ({ item }) => {
     return (
@@ -17,8 +40,7 @@ const HomeFlowStaggeredList = (props) => {
         {
           item.groupTitle !== undefined ?
             <HomeCarGroupItem item={item} />
-
-            : <HomeCarItem item={item} />
+            : Items({ item })
         }
       </>
     );
@@ -29,15 +51,16 @@ const HomeFlowStaggeredList = (props) => {
 
 
       <FlatList
-        data={dataHomeFlow}
+        data={ads}
         renderItem={renderItem}
         style={styles.list}
         numColumns={2}
-
-        ItemSeparatorComponent={
-          () => <View style={{ width: 160, backgroundColor: 'pink' }}/>
-        }
-        keyExtractor={item => item.id} />
+        columnWrapperStyle={{ justifyContent: "space-between" }}
+        keyExtractor={(item) => (item.id)}
+        extraData={selectItem}
+        ListHeaderComponent={listHeaderItem}
+        showsVerticalScrollIndicator={false}
+      />
 
 
     </View>
@@ -52,7 +75,7 @@ const styles = StyleSheet.create({
   },
   list: {
     flexGrow: 1,
-    flexWrap:'wrap'
+    flexWrap: "wrap",
   },
 });
 

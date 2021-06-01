@@ -47,7 +47,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   list: {
+    marginTop: hp(20),
     flexGrow: 1,
-    flexWrap:'wrap'
+    flexWrap: "wrap",
   },
 });

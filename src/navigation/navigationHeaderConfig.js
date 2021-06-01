@@ -10,15 +10,15 @@ import { Colors } from "../styles/Colors";
 
 export const headerDefaultConfig = (title = "", color = Colors.white, colorTitle = Colors.findInputSearch) => {
   return {
-    headerTitle: props => <HeaderTitle {...props} isIcon={!title} title={title} colorTitle={colorTitle}/>,
+    headerTitle: props => <HeaderTitle {...props} isIcon={!title} title={title} colorTitle={colorTitle} />,
     headerTintColor: color,
     headerTransparent: false,
     headerStyle: {
       backgroundColor: color,
       shadowColor: color,
     },
-    headerLeft: props => <BackButton />,
-    headerRight: props => <ProfileButton />,
+    headerLeft: props => <BackButton {...props} />,
+    headerRight: props => <ProfileButton {...props} />,
   };
 };
 
@@ -32,6 +32,6 @@ export const headerHomeConfig = (title = "") => {
       shadowColor: "white",
     },
 
-    headerRight: props => <NotificationButton />,
+    headerRight: props => <NotificationButton {...props} />,
   };
 };

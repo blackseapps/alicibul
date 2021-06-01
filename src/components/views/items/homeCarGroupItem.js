@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
 
     backgroundColor: Colors.black,
     height: hp(145),
-
+    width: wp(160),
 
     borderRadius: hp(7),
 
@@ -41,22 +41,20 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   images: {
-    resizeMode: "contain",
     width: wp(160),
-
+    resizeMode: "cover",
     borderRadius: wp(7),
   },
   opacity: {
     position: "absolute",
     backgroundColor: Colors.Primary,
-    opacity: 0.5,
+    opacity: 0.8,
     top: 0,
     left: 0,
-    bottom: 0,
+    bottom: hp(-4),
     right: 0,
-    marginTop: hp(2),
-    borderRadius: hp(7),
 
+    borderRadius: hp(7),
   },
   content: {
     position: "absolute",
