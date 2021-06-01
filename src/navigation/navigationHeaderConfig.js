@@ -4,19 +4,21 @@ import React from "react";
 import BackButton from "../views/header/backButton";
 import HeaderHomeComponent from "../views/header/home";
 import NotificationButton from "../views/header/notificationButton";
+import ProfileButton from "../views/header/profileButton";
+import { Colors } from "../styles/Colors";
 
 
-export const headerDefaultConfig = (title = "") => {
+export const headerDefaultConfig = (title = "", color = Colors.white, colorTitle = Colors.findInputSearch) => {
   return {
-    headerTitle: props => <HeaderTitle {...props} isIcon={!title} title={title} />,
-    headerTintColor: "white",
+    headerTitle: props => <HeaderTitle {...props} isIcon={!title} title={title} colorTitle={colorTitle}/>,
+    headerTintColor: color,
     headerTransparent: false,
     headerStyle: {
-      backgroundColor: "white",
-      shadowColor: "white",
+      backgroundColor: color,
+      shadowColor: color,
     },
     headerLeft: props => <BackButton />,
-    headerRight: props => <BackButton />,
+    headerRight: props => <ProfileButton />,
   };
 };
 

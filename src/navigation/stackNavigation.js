@@ -12,6 +12,9 @@ import SalesMain from "../containers/sales/SalesMain";
 import CarFind from "../containers/find/CarFind";
 import { headerDefaultConfig, headerHomeConfig } from "./navigationHeaderConfig";
 import BackButton from "../views/header/backButton";
+import ProfileButton from "../views/header/profileButton";
+import SalesCarValuePreview from "../containers/sales/SalesCarValuePreview";
+import { Colors } from "../styles/Colors";
 
 const RootStack = createStackNavigator();
 const AuthStack = createStackNavigator();
@@ -83,10 +86,17 @@ export function StackCarFind() {
 export function StackSales() {
   return (
     <SalesStack.Navigator initialRouteName={"Sales"}
-                          screenOptions={headerDefaultConfig("Sales")}>
+                          screenOptions={headerDefaultConfig("Değerini Öğren")}>
       <SalesStack.Screen
         name="Sales"
         component={SalesMain} />
+
+      <SalesStack.Screen
+        name="SalesCarValuePreview"
+        component={SalesCarValuePreview}
+        options={headerDefaultConfig("Değerini Öğren", Colors.Primary, Colors.white)}
+      />
+
     </SalesStack.Navigator>
   );
 }
@@ -113,6 +123,12 @@ export function StackProfile() {
   );
 }
 
+
+const profileButton = () => {
+  return (
+    <ProfileButton />
+  );
+};
 
 const styles = StyleSheet.create({
   container: {

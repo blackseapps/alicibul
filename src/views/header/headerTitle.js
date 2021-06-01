@@ -13,7 +13,7 @@ const HeaderTitle = (props) => {
       props.color === Colors.white ?
         null : null
       :
-      <Text style={styles.text}>{props.title}</Text>
+      <Text style={[styles.text,{color:props.colorTitle}]}>{props.title}</Text>
     }
   </View>;
 };
@@ -28,10 +28,10 @@ const styles = StyleSheet.create({
   },
   containerDizayn: {},
   text: {
-    fontSize: wp(20),
-    fontWeight: "600",
+    fontSize: wp(17),
+    fontWeight: "500",
     fontFamily: avenirHeavy,
     textAlign: "center",
-    color: Colors.black,
+    color: Colors.findInputSearch,
   },
 });

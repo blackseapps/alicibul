@@ -8,3 +8,7 @@ export const imagesHomeImageThree = require("./images/homeImageThree.png");
 export const imagesHomeImageFour = require("./images/homeImageFour.png");
 
 export const imagesAudiLogo = require("./images/audiLogo.png");
+
+export const imagesProfileButton = require("./images/profileButton.png");
+
+export const imagesDetailCar= require("./images/detailCar.png");

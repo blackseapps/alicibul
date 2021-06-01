@@ -1,31 +1,36 @@
 import React from "react";
-import {StyleSheet, TouchableOpacity, View} from "react-native";
-import {hp, wp} from "../../styles/Dimen";
-import AntDesign from "react-native-vector-icons/AntDesign";
-import {useNavigation} from '@react-navigation/native';
+import { StyleSheet, TouchableOpacity, View } from "react-native";
+import { hp, wp } from "../../styles/Dimen";
+import { useNavigation } from "@react-navigation/native";
+import { Colors } from "../../styles/Colors";
+import SimpleLineIcons from "react-native-vector-icons/SimpleLineIcons";
 
 const BackButton = props => {
 
-    const navigation = useNavigation()
+  const navigation = useNavigation();
 
-    const goBack = () => {
-        navigation.goBack();
-    }
+  const onHandle = () => {
+    navigation.goBack();
+  };
 
-    return <View style={styles.container}>
-        <TouchableOpacity onPress={goBack}>
-            <AntDesign style={styles.icon} size={20} name={"arrowleft"}/>
-        </TouchableOpacity>
-    </View>
-}
+  return (
+    <TouchableOpacity style={styles.container} onPress={onHandle}>
+      <SimpleLineIcons style={styles.icon} color={Colors.white} size={wp(14)} name={"arrow-left"} />
+    </TouchableOpacity>
+  );
+};
 
-export default BackButton
+export default BackButton;
 
 const styles = StyleSheet.create({
-    container: {},
-    icon: {
-        height: hp(24),
-        width: hp(24),
-        marginLeft: wp(8),
-    }
-})
+  container: {
+    backgroundColor: Colors.notiButton,
+    height: hp(32),
+    width: hp(32),
+    marginLeft: wp(23),
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: hp(7),
+  },
+  icon: {},
+});
