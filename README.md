@@ -5,4 +5,4 @@ bu sekilde gozukmektedir.Yani bir hata degildir.Yapininda nasil kurulacagi belli
 
 
 
-Proje iPhone 12 Pro (14.5),iPhone 8 (12.5), Pixel 2 API 24 emulatorlerinde calistirilmistir.
+Proje iPhone 12 Pro (14.5),iPhone 8 (12.5) emulatorlerinde calistirilmistir.Android tarafinda calistirilmamistir.
